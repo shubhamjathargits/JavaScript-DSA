@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let data=[10,20,30,40,50];
+    document.write(data);
+    function searchme(){
+      let searcho=document.getElementById('searchv').value;
+      let index=undefined;
+      for(let i=0;i<=data.length-1;i++)
+      {
+        if(data[i]===parseInt(searcho)){
+            index=i;
+        }
+        else{
+        alert("Abbe Upper dekhake Thik se value Daal !")
+      }s
+      }
+      
+      document.getElementById('ser').innerHTML=index;
+
+    }
+    </script>
+    <form>
+        <input type="text" placeholder="enter search Value" id="searchv">
+        <button type="button"     onclick="searchme()">Muze Dundhoo</button>
+    </form>
+    <div id="ser"></div>
+</body>
+</html>

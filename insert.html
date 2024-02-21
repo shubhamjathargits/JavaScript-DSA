@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color:red;
+        }
+        .plus{
+            border:2px solid blue;
+            height:100px;
+            width:200px;
+            padding: 10px;
+            margin-top: 50px;
+            border-radius: 20px;
+        }
+        input{
+            border:2px solid red;
+            height:40px;
+            width:300px;
+            border-radius: 10px;
+        }
+        button{
+            background-color: green;
+            color: white;
+            height:40px;
+            width:100px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(31, 152, 31);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <script>
+ data=[10,20,30,40,50];
+ document.write(data)
+ function Chalo(){
+    let pos=document.getElementById('position').value;
+    let ele=document.getElementById('nele').value;
+    for(let i=data.length-1;i>=0;i--)
+    {
+        if(i>=pos){
+            data[i+1]=data[i];
+            if(pos==i)
+            {
+                data[i]=ele;
+            }
+        }
+    }
+
+    document.getElementById('output').innerHTML ="<h2>Output is=</h2>"+ data.join(', ');
+ }
+   </script> 
+   <from>
+    <input type="text" placeholder="Enter postion" id="position">
+    <input type="text" placeholder="Enter new Element" id="nele">
+    <button onclick="Chalo()">Lets Goo</button>
+   </from>
+   <div class="plus" id="output"></div>
+</body>
+</html>

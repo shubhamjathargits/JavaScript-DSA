@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data=[22,23,44,55,11,66,77]
+        for(let i=0;i<data.length;i++)
+        {
+            document.write(`Element at postion ${i} is ${data[i]} <br>`);
+        }
+        function getno(){
+            let ele= document.getElementById('element').value;
+            if(ele<data.length && typeof parseInt(ele)==="number" && ele>0)
+            {
+                alert(data[ele]);
+            }
+            else {
+            alert("nit no. tak yedya ")
+        }
+        }
+        
+    </script>
+<form>
+    <input type="text" id="element">
+    <button onclick="getno()">Get Me</button>
+</form>
+</body>
+</html>
